@@ -60,7 +60,7 @@ export class ExpoDriver extends AbstractSqliteDriver {
     protected createDatabaseConnection() {
         return new Promise<void>((ok, fail) => {
             try {
-                const databaseConnection = this.sqlite.openDatabase(
+                const databaseConnection = this.sqlite.openDatabaseSync(
                     this.options.database,
                 )
                 /*
